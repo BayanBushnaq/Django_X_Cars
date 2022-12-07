@@ -1,0 +1,13 @@
+
+{% extends '_base.html'%}
+{% block content %}
+<h1> List of Cars model : </h1>
+<button><a href={% url 'car_CreateView'  %}>Create</a></button>
+{% for car in object_list %}
+<h2> {{"-"}} {{car.name}}</h2>
+<img src="{{car.images}}" alt="{{car.name}}">
+<button><a href={% url 'car_DetailView' car.pk %}>Details</a></button>
+<button><a href={% url 'car_UpdateView' car.pk %}>Update</a></button>
+<button><a href={% url 'car_DeleteView' car.pk %}>Delete</a></button>
+{% endfor %}
+{% endblock content %}
