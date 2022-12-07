@@ -1,0 +1,11 @@
+{% extends '_base.html'%}
+{% block content %}
+<h1> List of Cars model : </h1>
+
+<h2> {{"-"}} Car Name:  {{car.name}}</h2>
+<h2> {{"-"}} Purchaser: {{car.purchaser}}</h2>
+<h2> {{"-"}} Description: {{car.description}}</h2>
+<h2> {{"-"}} car_model: {{car.model}}</h2>
+<img src="{{car.images}}" alt="{{car.name}}"><br>
+<button><a href={% url 'car_listview' %}>Home</a></button>
+{% endblock content %}
